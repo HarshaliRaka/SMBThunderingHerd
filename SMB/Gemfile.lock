@@ -63,6 +63,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta-tags (1.5.0)
+      actionpack
     mime-types (1.25.1)
     multi_json (1.11.0)
     multi_xml (0.5.5)
@@ -92,6 +94,7 @@ GEM
     rake (10.4.2)
     rdoc (3.12.2)
       json (~> 1.4)
+    redis (3.0.7)
     sass (3.4.13)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -126,7 +129,9 @@ DEPENDENCIES
   jdbc-mysql
   jquery-rails
   jruby-openssl
+  meta-tags
   rails (= 3.2.13)
+  redis
   sass-rails (~> 3.2.3)
   therubyrhino
   uglifier (>= 1.0.3)

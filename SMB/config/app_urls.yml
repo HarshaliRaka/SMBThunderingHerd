@@ -1,11 +1,11 @@
 development:
- send_mail_empl_url: "http://localhost:3000/alerts_mail/send_mail_empl.json"
- send_mail_debt_url: "http://localhost:3000/alerts_mail/send_mail_debt.json"
+  send_mail_empl_url: "http://localhost:3000/alerts_mail/send_mail_empl.json"
+  send_mail_debt_url: "http://localhost:3000/alerts_mail/send_mail_debt.json"
 
 test:
- send_mail_empl_url: "http://localhost:3000/alerts_mail/send_mail_empl.json"
- send_mail_debt_url: "http://localhost:3000/alerts_mail/send_mail_debt.json"
+  send_mail_empl_url: "http://localhost:3000/alerts_mail/send_mail_empl.json"
+  send_mail_debt_url: "http://localhost:3000/alerts_mail/send_mail_debt.json"
 
 production:
   send_mail_empl_url: "http://localhost:3000/alerts_mail/send_mail_empl.json"
- send_mail_debt_url: "http://localhost:3000/alerts_mail/send_mail_debt.json"
+  send_mail_debt_url: "http://localhost:3000/alerts_mail/send_mail_debt.json"
