@@ -8,7 +8,7 @@ class CreatePayrolls < ActiveRecord::Migration
       t.integer :bonus ,:default => 0
 
       t.integer :income_others ,:default => 0
-      
+
 			t.integer :hra_exempt ,:default => 0
 			t.integer :prof_tax ,:default => 2400
 
@@ -27,7 +27,7 @@ class CreatePayrolls < ActiveRecord::Migration
 			t.integer :fixed_deposit ,:default => 0
 			t.integer :pension ,:default => 0
 			t.integer :national_pension ,:default => 0
-			
+
 			t.integer :rgess ,:default => 0
 			t.integer :mediclaim ,:default => 0
 			t.integer :education_loan ,:default => 0
@@ -55,13 +55,14 @@ class CreatePayrolls < ActiveRecord::Migration
 			t.integer :rebate ,:default => 0
 			t.integer :taxable_income ,:default => 0
 			t.integer :total_tax ,:default => 0
-			
+
 			t.integer :sec80c ,:default => 0
 			t.integer :sec80cg ,:default => 0
 			t.integer :rent ,:default => 0
 
 
-     
+      t.references :employee
+
       t.timestamps
 
     end

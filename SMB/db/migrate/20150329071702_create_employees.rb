@@ -8,7 +8,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :email
       t.string :pancard
       t.date :joined
-      t.date :left
+      t.boolean :left
       t.references :user
       t.timestamps
 
