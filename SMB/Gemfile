@@ -28,6 +28,7 @@ gem 'jquery-rails'
 gem 'httparty'
 gem 'redis'
 gem 'meta-tags', :require => 'meta_tags'
+gem 'whenever', :require => false
 
 
 # To use ActiveModel has_secure_password

@@ -36,18 +36,7 @@ class CreatePayrolls < ActiveRecord::Migration
 			t.integer :handicap_dependent ,:default => 0
 			t.integer :donations ,:default => 0
 
-			t.integer :jan_sal ,:default => 0
-			t.integer :feb_sal ,:default => 0
-			t.integer :mar_sal ,:default => 0
-			t.integer :apr_sal ,:default => 0
-			t.integer :may_sal ,:default => 0
-			t.integer :jun_sal ,:default => 0
-			t.integer :jul_sal ,:default => 0
-			t.integer :aug_sal ,:default => 0
-			t.integer :sep_sal ,:default => 0
-			t.integer :oct_sal ,:default => 0
-			t.integer :nov_sal ,:default => 0
-			t.integer :dec_sal ,:default => 0
+			t.integer :sal ,:default => 0
 
 			t.integer :income_tax ,:default => 0
 			t.integer :education_cess ,:default => 0
@@ -55,6 +44,7 @@ class CreatePayrolls < ActiveRecord::Migration
 			t.integer :rebate ,:default => 0
 			t.integer :taxable_income ,:default => 0
 			t.integer :total_tax ,:default => 0
+      t.integer :tax_month ,:default => 0
 
 			t.integer :sec80c ,:default => 0
 			t.integer :sec80cg ,:default => 0
