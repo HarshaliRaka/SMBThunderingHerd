@@ -58,4 +58,5 @@ SMB::Application.routes.draw do
   root :to => "home#index"
 
   match 'employees/all', :controller => :employees , :action => "all"
+  match 'employees/addDetail', :controller => :employees , :action => "create"
 end
