@@ -1,7 +1,8 @@
-class TopProductsController
+class TopProductsController < ApplicationController
 
-  def self.getProducts
-    @topProducts = TopProducts.getTop10Products
+  def get_product
+    @topProducts = TopProduct.getTop10Products
+    render :top_product
   end
 
 end
