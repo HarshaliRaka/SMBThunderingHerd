@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(:version => 20150330125806) do
     t.string   "phone_number"
     t.string   "email"
     t.string   "pancard"
-    t.date     "joined"
-    t.boolean  "left"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.string   "joined"
+    t.boolean  "left",         :default => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   create_table "invoice_items", :force => true do |t|
@@ -109,7 +109,7 @@ ActiveRecord::Schema.define(:version => 20150330125806) do
   create_table "save_taxes", :force => true do |t|
     t.integer  "employee_id"
     t.string   "act_name"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

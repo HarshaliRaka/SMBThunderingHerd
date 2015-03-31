@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag :styles %>
+<% title "thunderingHerd " %>
+<% description "" %>
+<body>
+  <h1> This is SMB application </h1>
+  <% @employees.each do |i| %>
+    <tr>
+      <td><%= i.name %></td>
+      <td><%=i.email %></td>
+      <td><%=i.payroll.sal %></td>
+      <td><%=i.payroll.bonus %></td>
+      <td><%=i.payroll.total_tax %></td>
+    </tr>
+
+
+
+
+<% end %>
+
+</body>
+</html>

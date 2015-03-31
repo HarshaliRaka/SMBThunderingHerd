@@ -1,9 +1,466 @@
 <%= stylesheet_link_tag :styles %>
 <% title "thunderingHerd " %>
 <% description "" %>
-<body>
-  <h1> This is SMB application </h1>
 
+<div id="page" style='background: #ffffff;margin: 0 auto;width: 980px;
+  border-radius: 3px;border: 1px solid #333;overflow: visible;
+  -webkit-border-radius: 3px;-moz-border-radius: 3px;
+  border-radius: 3px;color: #333;box-shadow: 0 1px 0 rgba(255,255,255,0.8),inset 0 1px 2px rgba(0,0,0,0.06);
+  font-size: 14px;font-family: "Helvetica neue",Helvetica,Arial,Sans-serif;
+  line-height: 1;height: 2250px;
+  padding: 20px 60px 20px 60px;'>
+  <div id="cntr" class="cntr">
+
+    <div id="head" style="font-weight: 400;font-size: 20px;text-align: center;padding-bottom: 10px;padding-top: 10px;background: #000000;color: #ffffff;font-weight: bold;border-bottom-color: #121213;">
+      TAX COMPUTATIONS FOR YEAR 2015-16
+    </div>
+
+    <div>
+      <div class="p30" style="padding-left: 30px;padding-bottom: 10px;padding-top: 10px;text-align: left;font-size: 14px;border-bottom: 1px solid #121213;">
+        <span>ID: </span><span><%=employee.id %></span>
+      </div>
+      <div class="p30" style="padding-left: 30px;padding-bottom: 10px;padding-top: 10px;text-align: left;font-size: 14px;border-bottom: 1px solid #121213;">
+        <span>NAME:</span><span></span>
+      </div>
+    </div>
+
+    <div id="content">
+
+      <div id="leftRow" style="position: relative;float: left;margin-right: 70px;">
+        <div id="content_0" style="margin-top: -20px;">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">BASIC</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">HOUSE RENT ALLOWANCE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">SPECIAL ALLOWANCE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">CONVEYANCE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">BONUS</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">JOINING BONUS</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">LTA ADVANCE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">RETENTION BONUS</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">LTA ADVANCE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">RETENTION BONUS</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">MEDICAL TAXABLE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">BOOKS & PERIODICAL TAX</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TELEPHONE AND INTERNET TAX</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+           </tr>
+          </table>
+        </div>
+
+        <div id="content_1">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">GROSS INCOME WITHOUT PERK</th>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></th>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">LOAN PERK</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">ESOP PERK</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">GROSS PERK</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="content_2">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">GROSS INCOME</th>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></th>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">HRA EXEMPTION</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">CONVEYANCE EXEMPTION</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">LTA EXEMPTION</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">EDUCATION EXEMPTION</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">MEDICAL EXEMPTION</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="content_3">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TOTAL EXEMPTION</th>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></th>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">SALARY AFTER SECTION 10</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PREVIOUS EMPLOYER SALARY</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PT</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PREVIOUS EMPLOYER PT</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">SALARY AFTER SECTION 16</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">INCOME FROM HOUSE PROPERTY</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">INCOME FROM OTHER SOURCES</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="content_4">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TOTAL EXEMPTION</th>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></th>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">SALARY AFTER SECTION 10</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PREVIOUS EMPLOYER SALARY</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PT</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PREVIOUS EMPLOYER PT</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">SALARY AFTER SECTION 16</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">INCOME FROM HOUSE PROPERTY</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">INCOME FROM OTHER SOURCES</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="content_5">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">GROSS TOTAL INCOME</th>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></th>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">INVESTMENT UNDER SEC 80CCE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">RGRESS SEC 80CCG</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">MEDICLAIM SEC 80D</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">EDUCATION LOAN SEC 80E</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">INTEREST ON HOUSING LOAN SEC 80EE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">HANDICAP (DEPENDENT) SEC 80DD</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">HANDICAP (SELF) SEC 80U</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="content_6">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">GROSS TOTAL INCOME</th>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></th>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+
+      <div id="rightRow">
+
+        <div id="content_7">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TAXABLE INCOME</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TAX ON INCOME</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">REBATE UNDER SEC 87A</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">SURCHARGE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TAX AFTER SURCHARGE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">EDUCATION CESS</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TOTAL TAX</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TAX DEDUCTED TILL LAST MONTH</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PREVIOUS EMPLOYMENT TAX</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="content_8">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TAXABLE INCOME</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TAX ON INCOME</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">REBATE UNDER SEC 87A</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+          </table>
+        </div>
+
+
+        <div id="content_9">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">** INVESTMENT UNDER SECTION 80C</th>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PR- PREVIOUS EMPLOYER</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PF</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">VPF</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">HLPR</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">LIC</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">ULIP</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">ELSS</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PPF</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">NSC</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">NSCAI</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">INF BONDS</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">NSS</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">MUTUAL FUND</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">SENIOR CITIZEN</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">POST OFFICE TERM DEPOSIT</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">CHILD EDUCATION EXPENSES</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">FIXED DEPOSIT</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="content_10">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TOTAL INVESTMENT U/S 80C</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PENSION PLAN -80CCC</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">NATIONAL PENSION SCHEME</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">SECTION 80 CCE (SEC80C + SEC80CCC + SEC80CCD)</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+           </tr>
+          </table>
+        </div>
+
+        <div id="content_11">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TOTAL INVESTMENT S U/S 80CCE</th>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></th>
+            </tr>
+          </table>
+        </div>
+
+        <div id="content_12">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">HRA CALCULATIONS</th>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></th>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">TOTAL RENT PAID</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">10% SALARY</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">RENT PAID 10% SALARY</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">SALARY 40% OR 50%</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">ACTUAL HRA PAID</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+            <tr>
+              <td style="font-weigth:bold;background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">LEAST OF THE THREE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"></td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
 </body>
 </html>
-

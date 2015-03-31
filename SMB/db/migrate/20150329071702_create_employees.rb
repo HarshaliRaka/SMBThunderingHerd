@@ -7,8 +7,8 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :phone_number
       t.string :email
       t.string :pancard
-      t.date :joined
-      t.boolean :left
+      t.string :joined
+      t.boolean :left ,:default => false
 
       t.timestamps
 

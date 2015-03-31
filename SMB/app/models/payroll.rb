@@ -15,6 +15,10 @@ class Payroll < ActiveRecord::Base
 
 
   def self.calculate_tax payroll
+
+    p "----here in calculate tax"
+    p payroll
+
   	@payroll = payroll
 
   	total_income = @payroll.basic + @payroll.hra + @payroll.special + @payroll.conveyance + @payroll.bonus + @payroll.income_others
@@ -90,7 +94,7 @@ class Payroll < ActiveRecord::Base
     deduct = @payroll.prof_tax + total_tax
     sal = (total_pay - deduct)/12
 
-    @payroll.update_attributes(sec80c: sec80c,
+    @payroll.assign_attributes(sec80c: sec80c,
                                 sec80cg: sec80cg,
                                 hra_exempt: hra_exempt,
                                 taxable_income: taxable_income,
@@ -99,7 +103,9 @@ class Payroll < ActiveRecord::Base
                                 surcharge: surcharge,
                                 education_cess: education_cess,
                                 total_tax: total_tax,
-                                sal: sal)
+                                sal: sal,
+                                tax_month: total_tax/12)
+    p @payroll
 
   end
 
@@ -110,6 +116,38 @@ class Payroll < ActiveRecord::Base
   #   @payroll.sal = (total_pay - deduct)/12
   #
   # end
+
+  def self.create params
+    p "===here in create payroll"
+    p params
+    @payroll = Payroll.new
+    @payroll.basic = params[:basic].to_i
+    @payroll.hra = params[:hra].to_i
+    @payroll.special =  params[:special].to_i
+    @payroll.conveyance = params[:conveyance].to_i
+    @payroll.bonus = params[:bonus].to_i
+    @payroll.income_others =  params[:income_others].to_i
+    @payroll.pf = params[:basic].to_i * 0.12
+    @payroll.ppf =  params[:ppf].to_i
+    @payroll.vpf = params[:vpf].to_i
+    @payroll.lic = params[:lic].to_i
+    @payroll.hlpr = params[:hlpr].to_i
+    @payroll.ulip = params[:ulip].to_i
+    @payroll.elss = params[:elss].to_i
+    @payroll.nsc = params[:nsc].to_i
+    @payroll.infrastructure =  params[:infrastructure].to_i
+    @payroll.nss = params[:nss].to_i
+    @payroll.mutual_fund = params[:mutual_fund].to_i
+    @payroll.child_edu = params[:child_edu].to_i
+    @payroll.fixed_deposit = params[:fixed_deposit].to_i
+    @payroll.pension = params[:pension].to_i
+    @payroll.national_pension = params[:national_pension].to_i
+
+    payroll = @payroll
+    p payroll
+    @payroll = calculate_tax(payroll)
+
+  end
 
 
 

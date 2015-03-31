@@ -1,154 +1,224 @@
-<%= form_for :article do |f| %>
+<%= form_for :employee, :url => employee_create_path do |f| %>
   <div class="fd head">
-    Create new employee
+    CREATE NEW EMPLOYEE
   </div>
 
   <div class="fd">
-    <span class="fr">
-      <%= f.label :Name %>
-      <%= f.text_field :name %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :Age %>
-      <%= f.text_field :age %>
-    </span>
-
-    <span class="fr">
-      <%= f.radio_button :multiple_classes, "1", checked: true, class: 'multiple_classes' %> <%= f.label :multiple_classes, "Male", class: 'multiple_classes' %>
-      <%= f.radio_button :multiple_classes, "0", class: 'multiple_classes' %> <%= f.label :multiple_classes, "Female", class: 'multiple_classes' %>
-    </span>
+    <table>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :Name %>
+            <%= f.text_field :name, value: '' %>
+          </span>
+        </td>
+        <td>
+          <span class="fr">
+            <%= f.label :Age %>
+            <%= f.text_field :age, value: '' %>
+          </span>
+        </td>
+        <td>
+          <span class="fr">
+            <%= f.radio_button :multiple_classes, "1", checked: true, class: 'multiple_classes' %> <%= f.label :multiple_classes, "Male", class: 'multiple_classes' %>
+            <%= f.radio_button :multiple_classes, "0", class: 'multiple_classes' %> <%= f.label :multiple_classes, "Female", class: 'multiple_classes' %>
+          </span>
+        </td>
+      </tr>
+    </table>
   </div>
 
   <div class="fd">
-    <span class="fr">
-      <%= f.label :Phone %>
-      <%= f.text_field :phone_number %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :Email %>
-      <%= f.text_field :email %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :pancard %>
-      <%= f.text_field :pancard %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :Joined %>
-      <%= f.text_field :joined %>
-    </span>
+    <table>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :Phone %>
+            <%= f.text_field :phone_number, value: '' %>
+          </span>
+        </td>
+        <td>
+          <span class="fr">
+            <%= f.label :Email %>
+            <%= f.text_field :email, value: '' %>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :pancard, "Pancard" %>
+            <%= f.text_field :pancard, value: '' %>
+          </span>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
   </div>
 
   <div class="fd">
-    <span class="fr">
-      <%= f.label :Basic %>
-      <%= f.text_field :basic %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :HRA %>
-      <%= f.text_field :hra %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :Special %>
-      <%= f.text_field :special %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :Conveyance %>
-      <%= f.text_field :conveyance %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :Bonus %>
-      <%= f.text_field :bonus %>
-    </span>
+    <table>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :Basic %>
+            <%= f.text_field :basic, value: '0' %>
+          </span>
+        </td>
+        <td>
+          <span class="fr">
+            <%= f.label :HRA, "HRA" %>
+            <%= f.text_field :hra, value: '0' %>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :Special %>
+            <%= f.text_field :special, value: '0' %>
+          </span>
+        </td>
+        <td>
+          <span class="fr">
+            <%= f.label :Conveyance %>
+            <%= f.text_field :conveyance, value: '0' %>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :Bonus %>
+            <%= f.text_field :bonus, value: '0' %>
+          </span>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
   </div>
 
   <div class="fd">
-    <span class="fr">
-      <%= f.label :Other_Sources_of_income %>
-      <%= f.text_field :income_others %>
-    </span>
+    <table>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :Other_Sources_of_income %>
+            <%= f.text_field :income_others, value: '0' %>
+          </span>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
   </div>
 
   <div class="fd">
-    <span class="fr">
-      <%= f.label :PPF %>
-      <%= f.text_field :ppf %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :VPF %>
-      <%= f.text_field :vpf %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :LIC %>
-      <%= f.text_field :lic %>
-    </span>
-
-    <span class="fr">
-      <%= f.text_field :hlpr %>
-      <%= f.label :HLPR %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :ULIP %>
-      <%= f.text_field :ulip %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :ELSS %>
-      <%= f.text_field :elss %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :NSC %>
-      <%= f.text_field :nsc %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :Infrastructure %>
-      <%= f.text_field :infrastructure %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :NSS %>
-      <%= f.text_field :nss %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :Mutual_fund %>
-      <%= f.text_field :mutual_fund %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :Child_Education %>
-      <%= f.text_field :child_edu %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :FD %>
-      <%= f.text_field :fixed_deposit %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :Pension %>
-      <%= f.text_field :pension %>
-    </span>
-
-    <span class="fr">
-      <%= f.label :'National Pension' %>
-      <%= f.text_field :national_pension %>
-    </span>
+    <table>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :PPF, "PPF" %>
+            <%= f.text_field :ppf, value: '0' %>
+          </span>
+        </td>
+        <td>
+          <span class="fr">
+            <%= f.label :VPF, "VPF" %>
+            <%= f.text_field :vpf, value: '0' %>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :LIC, "LIC" %>
+            <%= f.text_field :lic, value: '0' %>
+          </span>
+        </td>
+        <td>
+          <span class="fr">
+            <%= f.label :HLPR, "HLPR" %>
+            <%= f.text_field :hlpr, value: '0' %>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :ULIP, "ULIP" %>
+            <%= f.text_field :ulip, value: '0' %>
+          </span>
+        </td>
+        <td>
+          <span class="fr">
+            <%= f.label :ELSS, "ELSS" %>
+            <%= f.text_field :elss, value: '0' %>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :NSC, "NSC" %>
+            <%= f.text_field :nsc, value: '0' %>
+          </span>
+        </td>
+        <td>
+          <span class="fr">
+            <%= f.label :Infrastructure %>
+            <%= f.text_field :infrastructure, value: '0' %>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :NSS, "NSS" %>
+            <%= f.text_field :nss, value: '0' %>
+          </span>
+        </td>
+        <td>
+          <span class="fr">
+            <%= f.label :Mutual_fund %>
+          </span>
+            <%= f.text_field :mutual_fund, value: '0' %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :Child_Education %>
+          </span>
+            <%= f.text_field :child_edu, value: '0' %>
+        </td>
+        <td>
+          <span class="fr">
+            <%= f.label :FD %>
+            <%= f.text_field :fixed_deposit, value: '0' %>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="fr">
+            <%= f.label :Pension %>
+            <%= f.text_field :pension, value: '0' %>
+          </span>
+        </td>
+        <td>
+          <span class="fr">
+            <%= f.label :'National Pension' %>
+            <%= f.text_field :national_pension, value: '0' %>
+          </span>
+        </td>
+      </tr>
+    </table>
   </div>
 
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="fd button">
+    <%= f.submit :Submit, class: 'btn' %>
+  </div>
 <% end %>

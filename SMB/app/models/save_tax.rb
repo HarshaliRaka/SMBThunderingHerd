@@ -13,7 +13,7 @@ class SaveTax < ActiveRecord::Base
       if(@payroll.sec80c < SEC80C_LIMIT)
         tx = SaveTax.new
         tx.act_name = "Deductions under section 80C, 80CCC and 80CCD"
-        tx.description = "The total limit for this section is INR" + SEC80C_LIMIT +". Thus, you can still save tax on INR" + (SEC80C_LIMIT-sec80c) + ". You can invest in any of these : PPF, VPF, LIC, Pension schemes, Mutual Funds, ULIPs, etc."
+        tx.description = "The total limit for this section is INR 150000. Thus, you can still save tax on INR" + (SEC80C_LIMIT - @payroll.sec80c).to_s + ". You can invest in any of these : PPF, VPF, LIC, Pension schemes, Mutual Funds, ULIPs, etc."
         @save_taxes << tx
       end
       if(@payroll.sec80cg < 25000 && @payroll.taxable_income < 1200000)
@@ -24,17 +24,17 @@ class SaveTax < ActiveRecord::Base
       end
       if @payroll.hra ==0
         tx = SaveTax.new
-        tx.act_name = "Deductions under section 80GG (House Rent)" Section 10(13A) of the Income Tax Act and Rule 2A
+        tx.act_name = "Deductions under section 80GG (House Rent)"
         tx.description = "Deduction available is the least of :a) Rent paid minus 10% of total income b) Rs. 2000/- per month c) 25% of total income"
         @save_taxes << tx
       end
-      if (@payroll.hra !=0 && hra_exempt==0)
+      if (@payroll.hra !=0 && @payroll.hra_exempt==0)
         tx = SaveTax.new
         tx.act_name = "Section 10(13A) of the Income Tax Act and Rule 2A (House Rent Allowance)"
         tx.description = "In case you stay in an rented house, submit lease agreement copy, rent receipts and pancard of the owner (in case total rent per year > 100000)"
         @save_taxes << tx
       end
-      if (@payroll.education_loan == 0
+      if (@payroll.education_loan == 0)
         tx = SaveTax.new
         tx.act_name = "Section 80E(Education loan interest)"
         tx.description = "Tax saving is available for interest paid for education loans taken for higher studies."
