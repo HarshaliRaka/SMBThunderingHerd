@@ -9,10 +9,9 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :pancard
       t.date :joined
       t.boolean :left
-      t.references :user
+
       t.timestamps
 
-    #  add_index :employees, :email, :unique => true
     end
   end
 end

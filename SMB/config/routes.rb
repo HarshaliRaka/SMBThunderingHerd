@@ -61,4 +61,6 @@ SMB::Application.routes.draw do
 
   match 'employees/all', :controller => :employees , :action => "all"
   match 'invoice/new', :controller => :invoices , :action => "new"
+  match 'employees/addDetail', :controller => :employees , :action => "create"
+
 end

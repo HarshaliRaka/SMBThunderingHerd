@@ -1,0 +1,154 @@
+<%= form_for :article do |f| %>
+  <div class="fd head">
+    Create new employee
+  </div>
+
+  <div class="fd">
+    <span class="fr">
+      <%= f.label :Name %>
+      <%= f.text_field :name %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :Age %>
+      <%= f.text_field :age %>
+    </span>
+
+    <span class="fr">
+      <%= f.radio_button :multiple_classes, "1", checked: true, class: 'multiple_classes' %> <%= f.label :multiple_classes, "Male", class: 'multiple_classes' %>
+      <%= f.radio_button :multiple_classes, "0", class: 'multiple_classes' %> <%= f.label :multiple_classes, "Female", class: 'multiple_classes' %>
+    </span>
+  </div>
+
+  <div class="fd">
+    <span class="fr">
+      <%= f.label :Phone %>
+      <%= f.text_field :phone_number %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :Email %>
+      <%= f.text_field :email %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :pancard %>
+      <%= f.text_field :pancard %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :Joined %>
+      <%= f.text_field :joined %>
+    </span>
+  </div>
+
+  <div class="fd">
+    <span class="fr">
+      <%= f.label :Basic %>
+      <%= f.text_field :basic %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :HRA %>
+      <%= f.text_field :hra %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :Special %>
+      <%= f.text_field :special %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :Conveyance %>
+      <%= f.text_field :conveyance %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :Bonus %>
+      <%= f.text_field :bonus %>
+    </span>
+  </div>
+
+  <div class="fd">
+    <span class="fr">
+      <%= f.label :Other_Sources_of_income %>
+      <%= f.text_field :income_others %>
+    </span>
+  </div>
+
+  <div class="fd">
+    <span class="fr">
+      <%= f.label :PPF %>
+      <%= f.text_field :ppf %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :VPF %>
+      <%= f.text_field :vpf %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :LIC %>
+      <%= f.text_field :lic %>
+    </span>
+
+    <span class="fr">
+      <%= f.text_field :hlpr %>
+      <%= f.label :HLPR %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :ULIP %>
+      <%= f.text_field :ulip %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :ELSS %>
+      <%= f.text_field :elss %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :NSC %>
+      <%= f.text_field :nsc %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :Infrastructure %>
+      <%= f.text_field :infrastructure %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :NSS %>
+      <%= f.text_field :nss %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :Mutual_fund %>
+      <%= f.text_field :mutual_fund %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :Child_Education %>
+      <%= f.text_field :child_edu %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :FD %>
+      <%= f.text_field :fixed_deposit %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :Pension %>
+      <%= f.text_field :pension %>
+    </span>
+
+    <span class="fr">
+      <%= f.label :'National Pension' %>
+      <%= f.text_field :national_pension %>
+    </span>
+  </div>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

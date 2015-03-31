@@ -28,6 +28,7 @@ gem 'jquery-rails'
 gem 'httparty'
 gem 'redis'
 gem 'meta-tags', :require => 'meta_tags'
+gem 'whenever', :require => false
 
 gem 'savon', '~> 2.0'
 gem 'json'

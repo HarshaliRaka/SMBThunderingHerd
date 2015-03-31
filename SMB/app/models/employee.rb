@@ -5,6 +5,7 @@ class Employee < ActiveRecord::Base
   has_one :save_tax
 
   attr_accessible  :name, :age, :gender, :phone_number, :email, :pancard, :joined, :left
+  
 
 
 end
