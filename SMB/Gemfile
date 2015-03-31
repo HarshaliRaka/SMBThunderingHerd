@@ -30,6 +30,9 @@ gem 'redis'
 gem 'meta-tags', :require => 'meta_tags'
 gem 'whenever', :require => false
 
+gem 'savon', '~> 2.0'
+gem 'json'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
