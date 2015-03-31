@@ -4,4 +4,7 @@ class EmployeesController < ApplicationController
   def create
     render ('employees')
   end
+  def getpay
+    render ('payslip')
+  end
 end

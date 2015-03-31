@@ -63,4 +63,5 @@ SMB::Application.routes.draw do
   match 'invoice/new', :controller => :invoices , :action => "new"
   match 'employees/addDetail', :controller => :employees , :action => "create"
   match 'topProducts/getProducts' => 'top_products#get_product'
+  match 'employee/paySlip', :controller => :employees, :action => "getpay"
 end
