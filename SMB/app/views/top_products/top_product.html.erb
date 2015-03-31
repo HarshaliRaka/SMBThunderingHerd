@@ -1,9 +1,9 @@
 <h1>Top 10 Selling Products</h1>
 
+<table>
+  <tr>
   <%= @topProducts.each do |product| %>
-    <div>
-      <span><%= product["name"] %></span>
-      <span>
-      </span>
-    </div>
+      <td><%= product %></td>
   <% end %>
+  </tr>
+</table>
