@@ -1,6 +1,6 @@
 <h1> Add a Bill </h1>
 
-<%= form_for @invoice do |f| %>
+<%= form_for @invoice, as: :invoice,:url => invoice_create_path do |f| %>
 
   <p>
     <%= f.label 'Name' %>
@@ -21,3 +21,5 @@
     <%= f.label 'Quantity' %>
     <%= f.select 'quantity', @quantity %>
   </p>
+  <p><%= f.submit 'Send' %></p>
+<% end %>
