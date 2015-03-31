@@ -12,7 +12,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.references :user
       t.timestamps
 
-      add_index :employees, :email,   :unique => true
+    #  add_index :employees, :email, :unique => true
     end
   end
 end

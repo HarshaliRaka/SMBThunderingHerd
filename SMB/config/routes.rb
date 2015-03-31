@@ -57,5 +57,8 @@ SMB::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   root :to => "home#index"
 
+#  get '/invoice', to: 'invoice'
+
   match 'employees/all', :controller => :employees , :action => "all"
+  match 'invoice/new', :controller => :invoices , :action => "new"
 end

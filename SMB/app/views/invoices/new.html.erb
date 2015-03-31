@@ -1,0 +1,23 @@
+<h1> Add a Bill </h1>
+
+<%= form_for @invoice do |f| %>
+
+  <p>
+    <%= f.label 'Name' %>
+    <%= f.text_field 'customer_name' %>
+  </p>
+
+  <p>
+    <%= f.label 'Email' %>
+    <%= f.text_fiels 'email' %>
+  </p>
+
+  <p>
+    <%= f.label 'Item' %>
+    <%= f.association :locality, :collection => @items %>
+  </p>
+
+  <p>
+    <%= f.label 'Quantity' %>
+    <%= f.select 'quantity', @quantity %>
+  </p>
