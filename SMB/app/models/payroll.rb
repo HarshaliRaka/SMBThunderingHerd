@@ -94,7 +94,7 @@ class Payroll < ActiveRecord::Base
     deduct = @payroll.prof_tax + total_tax
     sal = (total_pay - deduct)/12
 
-    @payroll.assign_attributes(sec80c: sec80c,
+    @payroll.update_attributes(sec80c: sec80c,
                                 sec80cg: sec80cg,
                                 hra_exempt: hra_exempt,
                                 taxable_income: taxable_income,
@@ -144,8 +144,8 @@ class Payroll < ActiveRecord::Base
     @payroll.national_pension = params[:national_pension].to_i
 
     payroll = @payroll
-    p payroll
-    @payroll = calculate_tax(payroll)
+    # p payroll
+    # @payroll = calculate_tax(payroll)
 
   end
 

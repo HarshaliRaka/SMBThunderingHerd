@@ -7,7 +7,7 @@ class NotificationService
 
       if @employee.payroll.total_tax != 0
         subject = "Save your money, pay less taxes "
-        hash = {:template_name => "send_notification_savetax", :employee => @employee,:payroll =>@employee.payroll, :savetax => @employee.save_taxes, :subject => subject, :to => employee.email}
+        hash = {:template_name => "send_notification_savetax", :employee => @employee, :savetax => @employee.save_taxes, :subject => subject, :to => employee.email}
         if employee.email.present? and !employee.left
           HTTParty.post(SEND_MAIL_URL, :body => hash.to_json)
         end
@@ -26,7 +26,7 @@ class NotificationService
       @date = Date.today
       @month = @date.strftime("%B")
      subject = "Payslip for " + @month
-     hash = {:template_name => "send_notification_payslip", :month => @month,:employee => @employee,   :subject => subject, :to => employee.email}
+     hash = {:template_name => "send_notification_payslip", :month => @month,:employee => @employee,:payroll =>@employee.payroll,   :subject => subject, :to => employee.email}
      if employee.email.present?
        HTTParty.post(SEND_MAIL_URL, :body => hash.to_json)
      end
@@ -41,7 +41,7 @@ class NotificationService
       @employee = employee
 
      subject = "Taxslip for year 2014-15"
-     hash = {:template_name => "send_notification_taxslip", :employee => @employee,  :subject => subject, :to => employee.email}
+     hash = {:template_name => "send_notification_taxslip", :employee => @employee,:payroll =>@employee.payroll,  :subject => subject, :to => employee.email}
      if employee.email.present?
        HTTParty.post(SEND_MAIL_URL, :body => hash.to_json)
      end

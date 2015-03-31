@@ -2,15 +2,93 @@
 <% title "thunderingHerd " %>
 <% description "" %>
 <body>
-  <h1> This is SMB application </h1>
+  <h1> This is a list of all employees </h1>
+</br></br>
+<table>
+    <td style="font-family: helvetica,arial!important;
+    font-size: 16px!important;
+    font-weight: bold!important;
+    text-decoration: none;
+    border: 1px solid ;
+    border-radius: 3px;
+    vertical-align: baseline;">Employee Name</td>
+
+    <td style="font-family: helvetica,arial!important;
+    font-size: 16px!important;
+    font-weight: bold!important;
+    text-decoration: none;
+    border: 1px solid ;
+    border-radius: 3px;
+    vertical-align: baseline;">Email</td>
+
+    <td style="font-family: helvetica,arial!important;
+    font-size: 16px!important;
+    font-weight: bold!important;
+    text-decoration: none;
+    border: 1px solid ;
+    border-radius: 3px;
+    vertical-align: baseline;">Salary/pm(after tax)</td>
+
+    <td style="font-family: helvetica,arial!important;
+    font-size: 16px!important;
+    font-weight: bold!important;
+    text-decoration: none;
+    border: 1px solid ;
+    border-radius: 3px;
+    vertical-align: baseline;">Annual bonus</td>
+
+    <td style="font-family: helvetica,arial!important;
+    font-size: 16px!important;
+    font-weight: bold!important;
+    text-decoration: none;
+    border: 1px solid ;
+    border-radius: 3px;
+    vertical-align: baseline;">Total tax for annum</td>
+</br>
   <% @employees.each do |i| %>
+
     <tr>
-      <td><%= i.name %></td>
-      <td><%=i.email %></td>
-      <td><%=i.payroll.sal %></td>
-      <td><%=i.payroll.bonus %></td>
-      <td><%=i.payroll.total_tax %></td>
+      <td style="font-family: helvetica,arial!important;
+      font-size: 16px!important;
+      font-weight: bold!important;
+      text-decoration: none;
+      border: 1px solid ;
+      border-radius: 3px;
+      vertical-align: baseline;"><%= i.name %></td>
+
+      <td style="font-family: helvetica,arial!important;
+      font-size: 16px!important;
+      font-weight: bold!important;
+      text-decoration: none;
+      border: 1px solid ;
+      border-radius: 3px;
+      vertical-align: baseline;"><%=i.email %></td>
+
+      <td style="font-family: helvetica,arial!important;
+      font-size: 16px!important;
+      font-weight: bold!important;
+      text-decoration: none;
+      border: 1px solid ;
+      border-radius: 3px;
+      vertical-align: baseline;"><%=i.payroll.sal %></td>
+
+      <td style="font-family: helvetica,arial!important;
+      font-size: 16px!important;
+      font-weight: bold!important;
+      text-decoration: none;
+      border: 1px solid ;
+      border-radius: 3px;
+      vertical-align: baseline;"><%=i.payroll.bonus %></td>
+
+      <td style="font-family: helvetica,arial!important;
+      font-size: 16px!important;
+      font-weight: bold!important;
+      text-decoration: none;
+      border: 1px solid ;
+      border-radius: 3px;
+      vertical-align: baseline;"><%=i.payroll.total_tax %></td>
     </tr>
+  </br>
 
 
 

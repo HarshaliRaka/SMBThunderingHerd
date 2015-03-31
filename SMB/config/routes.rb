@@ -55,12 +55,12 @@ SMB::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-  root :to => "home#index", :as => :home
+  root :to => "top_products#get_product", :as => :home
 
 #  get '/invoice', to: 'invoice'
 
-  match 'employees/all', :controller => :employees , :action => "all"
-  match 'employees/add_employee', :controller => :employees , :action => "add_employee"
+  match 'employees/all', :controller => :employees , :action => "all", :as => :employee_all
+  match 'employees/add_employee', :controller => :employees , :action => "add_employee",:as => :employee_add
   match 'employees/create', :controller => :employees , :action => "create" , :as => :employee_create
   match 'employees/addDetail', :controller => :employees , :action => "create"
   match 'topProducts/getProducts' => 'top_products#get_product'
