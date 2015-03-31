@@ -46,25 +46,29 @@ class EmployeesController < ApplicationController
 
   end
 
-  def self.send_email_savetax
+  def send_email_savetax
     @employees = Employee.all
     @employees.each do |emp|
+
       NotificationService.new.send_notification_savetax(emp)
     end
+    redirect_to(home_path)
   end
 
-  def self.send_email_payslip
+  def send_email_payslip
     @employees = Employee.all
     @employees.each do |emp|
       NotificationService.new.send_notification_payslip(emp)
     end
+    redirect_to(home_path)
   end
 
-  def self.send_email_taxslip
+  def send_email_taxslip
     @employees = Employee.all
     @employees.each do |emp|
       NotificationService.new.send_notification_taxslip(emp)
     end
+    redirect_to(home_path)
   end
 
 end

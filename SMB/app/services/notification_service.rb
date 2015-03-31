@@ -5,10 +5,13 @@ class NotificationService
     begin
       @employee = employee
 
-      if @employee.payroll.total_tax != 0
+      if (@employee.payroll.total_tax > 0)
+        p "...inside save tax mail"
         subject = "Save your money, pay less taxes "
         hash = {:template_name => "send_notification_savetax", :employee => @employee, :savetax => @employee.save_taxes, :subject => subject, :to => employee.email}
-        if employee.email.present? and !employee.left
+        p hash.to_json
+        if employee.email.present?
+          p "==========this"
           HTTParty.post(SEND_MAIL_URL, :body => hash.to_json)
         end
       end
