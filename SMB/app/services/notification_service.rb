@@ -1,22 +1,17 @@
 class NotificationService
 
   #  Send mail for tax saving
-  def send_notification_savetax(employee)
+  def send_notification_savetax(employee,save_tax)
     begin
       @employee = employee
 
-      if (@employee.payroll.total_tax > 0)
-        p "...inside save tax mail"
-        subject = "Save your money, pay less taxes "
-        hash = {:template_name => "send_notification_savetax", :employee => @employee, :savetax => @employee.save_taxes, :subject => subject, :to => employee.email}
-        p hash.to_json
-        if employee.email.present?
-          p "==========this"
-          HTTParty.post(SEND_MAIL_URL, :body => hash.to_json)
-        end
-      end
+     subject = "Save your money, pay less tax "
+     hash = {:template_name => "send_notification_savetax", :employee => @employee,:savetax => save_tax,   :subject => subject, :to => employee.email}
+     if employee.email.present?
+       HTTParty.post(SEND_MAIL_URL, :body => hash.to_json)
+     end
     rescue Exception => e
-      Rails.logger.info e.inspect
+     Rails.logger.info e.inspect
     end
     ""
   end

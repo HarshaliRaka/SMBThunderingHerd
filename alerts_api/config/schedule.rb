@@ -13,8 +13,15 @@
 #   rake "some:great:rake:task"
 # end
 #
-every 3.minutes do
-  runner "EmployeesController.new.send_email_savetax"
-end
+# every 4.days do
+#   runner "AnotherModel.prune_old_records"
+# end
 
 # Learn more: http://github.com/javan/whenever
+set :job_template, "bash -l -c ':job'"
+
+
+every 5.minutes do 
+  runner "Alert.send_email", :output => {:error => 'error.log', :standard => 'cron.log'}
+end
+

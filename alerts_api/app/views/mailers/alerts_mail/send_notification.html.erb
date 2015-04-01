@@ -1,0 +1,26 @@
+<html>
+<div sytle="border: 3px solid red;">
+<div sytle="border: 3px solid white;">
+
+<p>Dear <%= obj['first_name']%>, </p>
+<p>Your <%= obj['relationship']%> posted the below opinion about you.</p>
+<div style="text-align:left;">
+<p><i>"<%= obj['opinion']['opinion_text'] %>"</i></p>
+</div>
+<ul>
+<li>People looked you up <%= obj['profile_views'] %> times</li>  
+<li>There are  <%= obj['opinion_count']%> opinions about you</li>
+</ul>
+<div style="text-align:left;">
+<a href="www.howeez.com/profiles/<%= obj['public_profile_url'] %>/opinions/<%= obj['opinion']['id'] %>?utm_source=notifications&utm_medium=email&utm_campaign=notifications">Click here</a> to visit Howeez
+</div>
+<br />
+<p>
+Howeez is an open platform to share opinions about others. The platform is moderated to uphold the quality of opinions shared on the platform. 
+</p>
+<br/>
+Regards,
+<br/ >
+<b>Howeez Team</b>
+</div></div>
+</html>

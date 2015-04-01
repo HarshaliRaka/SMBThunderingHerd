@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<body style="background: #f8f8f8;">
+<div sytle="border: 3px solid red;">
+<div sytle="border: 3px solid white;">
+
+<p>Dear <%= obj['employee']['name']%>, </p>
+<p>This is your payslip for the month of <%= obj['month']%></p>
+<div style="text-align:left;">
+
+
+<div id="page" style='background: #ffffff;margin: 0 auto;width: 980px;
+  border-radius: 3px;border: 1px solid #333;overflow: visible;
+  -webkit-border-radius: 3px;-moz-border-radius: 3px;
+  border-radius: 3px;color: #333;box-shadow: 0 1px 0 rgba(255,255,255,0.8),inset 0 1px 2px rgba(0,0,0,0.06);
+  font-size: 14px;font-family: "Helvetica neue",Helvetica,Arial,Sans-serif;
+  line-height: 1;height: 2250px;
+  padding: 20px 60px 20px 60px;'>
+  <div id="cntr" class="cntr">
+
+    <div id="head" style="font-weight: 400;font-size: 20px;text-align: center;padding-bottom: 10px;padding-top: 10px;background: #000000;color: #ffffff;font-weight: bold;border-bottom-color: #121213;">
+      SALARY SLIP
+    </div>
+
+    <div>
+      <div class="p30" style="padding-left: 30px;padding-bottom: 10px;padding-top: 10px;text-align: left;font-size: 14px;border-bottom: 1px solid #121213;">
+        <span>NAME: </span><%= obj['employee']['name'] %><span></span>
+      </div>
+      <div class="p30" style="padding-left: 30px;padding-bottom: 10px;padding-top: 10px;text-align: left;font-size: 14px;border-bottom: 1px solid #121213;">
+        <span>ID:</span><span><%= obj['employee']['id'] %></span>
+      </div>
+    </div>
+
+    <div id="content">
+
+
+        <div id="content_0" style="margin-top: -20px;">
+         <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">BASIC</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= obj['payroll']['basic'].to_i/12 %></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">HOUSE RENT ALLOWANCE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= obj['payroll']['hra'].to_i/12 %></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">SPECIAL ALLOWANCE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= obj['payroll']['special'].to_i/12 %></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">CONVEYANCE</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= obj['payroll']['conveyance'].to_i/12 %></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">BONUS for the year</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= obj['payroll']['bonus'] %></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="content_1">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PROVIDENT FUND</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= obj['payroll']['pf'].to_i/12 %></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">INCOME TAX</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= obj['payroll']['total_tax'].to_i/12 %></td>
+            </tr>
+            <tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">PROFESSION TAX</td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= obj['payroll']['prof_tax'].to_i/12 %></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="content_1">
+          <table style="margin-top:20px;border: 1.5px solid #999;">
+            <tr>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"> NET PAY for the MONTH </th>
+              <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= obj['payroll']['sal'] %></th>
+            </tr>
+          </table>
+        </div>
+  </div>
+</div>
+</div>
+<p>
+In case you have any concerns, please raise them.
+</p>
+<br/>
+Regards,
+<br/ >
+<b>Thundering Herd Admin</b>
+</div></div>
+
+</body>
+</html>
+</html>

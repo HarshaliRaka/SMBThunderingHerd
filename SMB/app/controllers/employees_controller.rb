@@ -49,8 +49,18 @@ class EmployeesController < ApplicationController
   def send_email_savetax
     @employees = Employee.all
     @employees.each do |emp|
-
-      NotificationService.new.send_notification_savetax(emp)
+      @save_taxes = emp.save_taxes
+      @savetax = @save_taxes
+      # []
+      # @save_taxes.each do |s|
+      #   s1 = OpenStruct.new
+      #   s1.act_name = s.act_name
+      #   s1.description = s1.description
+      #   @savetax << s1
+      # end
+      p "{{{{{{{{{{{{{{{{{{{{{{{{{}}}}}}}}}}}}}}}}}}}}}}}}}"
+      p @savetax
+      NotificationService.new.send_notification_savetax(emp,@savetax)
     end
     redirect_to(home_path)
   end

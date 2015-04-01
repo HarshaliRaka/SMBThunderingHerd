@@ -64,6 +64,8 @@ SMB::Application.routes.draw do
   match 'employees/create', :controller => :employees , :action => "create" , :as => :employee_create
   match 'employees/addDetail', :controller => :employees , :action => "create"
   match 'topProducts/getProducts' => 'top_products#get_product'
-  match 'save_tax' => 'employees#send_email_savetax'
+  match 'mail/save_tax' => 'employees#send_email_savetax'
+  match 'mail/payslip' => 'employees#send_email_payslip'
+  match 'mail/taxslip' => 'employees#send_email_taxslip'
 
 end
