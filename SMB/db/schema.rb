@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(:version => 20150330125806) do
 
   create_table "invoice_items", :force => true do |t|
     t.integer  "invoice_id"
-    t.integer  "item"
-    t.integer  "qtity"
+    t.integer  "item_id"
+    t.integer  "quantity"
     t.integer  "amount"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

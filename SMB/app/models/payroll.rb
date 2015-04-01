@@ -142,6 +142,7 @@ class Payroll < ActiveRecord::Base
     @payroll.fixed_deposit = params[:fixed_deposit].to_i
     @payroll.pension = params[:pension].to_i
     @payroll.national_pension = params[:national_pension].to_i
+    @payroll.rent = params[:rent].to_i
 
     payroll = @payroll
     # p payroll

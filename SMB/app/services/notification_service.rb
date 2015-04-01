@@ -7,6 +7,8 @@ class NotificationService
 
      subject = "Save your money, pay less tax "
      hash = {:template_name => "send_notification_savetax", :employee => @employee,:savetax => save_tax,   :subject => subject, :to => employee.email}
+     p "......,,,,,,,"
+     p hash.to_json
      if employee.email.present?
        HTTParty.post(SEND_MAIL_URL, :body => hash.to_json)
      end

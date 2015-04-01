@@ -47,17 +47,17 @@ class EmployeesController < ApplicationController
   end
 
   def send_email_savetax
+    @topProducts = TopProduct.getTop10Products
     @employees = Employee.all
     @employees.each do |emp|
       @save_taxes = emp.save_taxes
-      @savetax = @save_taxes
-      # []
-      # @save_taxes.each do |s|
-      #   s1 = OpenStruct.new
-      #   s1.act_name = s.act_name
-      #   s1.description = s1.description
-      #   @savetax << s1
-      # end
+      @savetax =[]
+      @save_taxes.each do |s|
+        s1 = OpenStruct.new
+        s1.act_name = s.act_name
+        s1.description = s.description
+        @savetax << s1
+      end
       p "{{{{{{{{{{{{{{{{{{{{{{{{{}}}}}}}}}}}}}}}}}}}}}}}}}"
       p @savetax
       NotificationService.new.send_notification_savetax(emp,@savetax)
@@ -66,6 +66,7 @@ class EmployeesController < ApplicationController
   end
 
   def send_email_payslip
+    @topProducts = TopProduct.getTop10Products
     @employees = Employee.all
     @employees.each do |emp|
       NotificationService.new.send_notification_payslip(emp)
@@ -74,6 +75,7 @@ class EmployeesController < ApplicationController
   end
 
   def send_email_taxslip
+    @topProducts = TopProduct.getTop10Products
     @employees = Employee.all
     @employees.each do |emp|
       NotificationService.new.send_notification_taxslip(emp)

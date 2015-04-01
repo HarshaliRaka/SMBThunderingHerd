@@ -35,7 +35,7 @@ CREATE TABLE `employees` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `employees` (
 
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
-INSERT INTO `employees` VALUES (1,'harsha',67,'Male','','atisni@gmail.com','',NULL,0,'2015-03-31 14:49:24','2015-03-31 14:49:24'),(2,'harsha',67,'Male','','atisni@gmail.com','',NULL,0,'2015-03-31 14:53:35','2015-03-31 14:53:35'),(3,'harsha',67,'Male','','atisni@gmail.com','',NULL,0,'2015-03-31 14:59:39','2015-03-31 14:59:39'),(4,'Harshali',22,'Female','8787897878','harshali.raka@gmail.com','67687hgjh',NULL,0,'2015-03-31 17:49:29','2015-03-31 17:49:29'),(5,'Nikita G',23,'Female','','nikigupta@ebay.com','',NULL,0,'2015-03-31 20:21:06','2015-03-31 20:21:06');
+INSERT INTO `employees` VALUES (1,'Nikita Gupta',22,'Female','','nikigupta@ebay.com','',NULL,0,'2015-04-01 06:08:11','2015-04-01 06:08:11'),(2,'Harshali Raka',22,'Female','','harshali.raka@gmail.com','',NULL,0,'2015-04-01 06:14:11','2015-04-01 06:14:11'),(3,'Nikita G',23,'Male','','nikks3591@gmail.com','',NULL,0,'2015-04-01 06:18:32','2015-04-01 06:18:32');
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -58,8 +58,8 @@ DROP TABLE IF EXISTS `invoice_items`;
 CREATE TABLE `invoice_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `invoice_id` int(11) DEFAULT NULL,
-  `item` int(11) DEFAULT NULL,
-  `qtity` int(11) DEFAULT NULL,
+  `item_id` int(11) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
   `amount` int(11) DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
@@ -211,7 +211,7 @@ CREATE TABLE `payrolls` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -220,7 +220,7 @@ CREATE TABLE `payrolls` (
 
 LOCK TABLES `payrolls` WRITE;
 /*!40000 ALTER TABLE `payrolls` DISABLE KEYS */;
-INSERT INTO `payrolls` VALUES (1,89769,87987,56576,9898,87687,0,0,2400,10772,78979,0,9899,0,0,0,0,0,0,0,0,9899,0,0,0,0,0,0,0,0,0,20152,0,0,0,0,210070,0,0,109549,0,0,1,'2015-03-31 14:49:24','2015-03-31 14:49:24'),(2,89769,87987,56576,9898,87687,0,0,2400,10772,78979,0,9899,0,0,0,0,0,0,0,0,9899,0,0,0,0,0,0,0,0,0,20152,0,0,0,0,210070,0,0,109549,0,0,2,'2015-03-31 14:53:35','2015-03-31 14:53:35'),(3,897690,87987,56576,9898,87687,0,0,2400,107722,78979,0,9899,0,0,0,0,0,0,0,0,9899,0,0,0,0,0,0,0,0,0,77135,120508,3615,0,0,977540,124123,10343,150000,0,0,3,'2015-03-31 14:59:39','2015-03-31 14:59:39'),(4,500000,200000,300000,8000,60000,2000,0,2400,60000,30000,0,7891,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73728,117341,3520,0,0,961709,120862,10071,97891,0,0,4,'2015-03-31 17:49:29','2015-03-31 17:49:29'),(5,500000,200000,280000,10000,300000,5000,0,2400,60000,100000,0,0,0,0,0,0,0,0,4000,0,0,0,0,0,0,0,0,0,0,0,68156,164780,4943,0,0,1132600,169723,14143,150000,0,0,5,'2015-03-31 20:21:06','2015-03-31 20:21:06');
+INSERT INTO `payrolls` VALUES (1,500000,200000,300000,9000,120000,2000,0,2400,60000,100000,0,9847,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73676,118920,3567,0,0,969600,122487,10207,150000,0,0,1,'2015-04-01 06:08:11','2015-04-01 06:08:11'),(2,48587,15790,87479,8787,67676,0,0,2400,5830,9898,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13186,0,0,0,0,201404,0,0,15728,0,0,2,'2015-04-01 06:14:11','2015-04-01 06:14:12'),(3,500000,200000,300000,8000,60000,3000,50000,2400,60000,30000,0,2000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74468,108720,3261,0,0,918600,111981,9331,92000,0,100000,3,'2015-04-01 06:18:32','2015-04-01 06:18:32');
 /*!40000 ALTER TABLE `payrolls` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -239,7 +239,7 @@ CREATE TABLE `save_taxes` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -248,7 +248,7 @@ CREATE TABLE `save_taxes` (
 
 LOCK TABLES `save_taxes` WRITE;
 /*!40000 ALTER TABLE `save_taxes` DISABLE KEYS */;
-INSERT INTO `save_taxes` VALUES (1,3,'Deductions under section 80CCG (Rajiv Gandhi Equity Saving Scheme)','Upon fulfillment of conditions laid down in the section, the deduction is lower of - 50% of amount invested in equity shares or Rs 25,000. ','2015-03-31 14:59:39','2015-03-31 14:59:39'),(2,3,'Section 10(13A) of the Income Tax Act and Rule 2A (House Rent Allowance)','In case you stay in an rented house, submit lease agreement copy, rent receipts and pancard of the owner (in case total rent per year > 100000)','2015-03-31 14:59:39','2015-03-31 14:59:39'),(3,3,'Section 80E(Education loan interest)','Tax saving is available for interest paid for education loans taken for higher studies.','2015-03-31 14:59:39','2015-03-31 14:59:39'),(4,3,'Section 80EE(First time Housing loan)','The deduction under this section is available only to Individuals for first house purchased where the value of the house is Rs 40lakhs or less and loan taken for the house is Rs 25lakhs or less. The total deduction allowed under this section is Rs 1,00,000. ','2015-03-31 14:59:39','2015-03-31 14:59:39'),(5,3,'Section 80D(Medical Insurance)','Tax saving on premiums paid towards medical insurance and health checkup upto 15000 for self, spouse & children and 15000 for parents.','2015-03-31 14:59:40','2015-03-31 14:59:40'),(6,3,'Section 80DD, 80DDB and 80U (Medical Expenditure for disability)','In case any expenses are incurred towards treatment of disabled or disabilities for self or dependent, please submit proofs.','2015-03-31 14:59:40','2015-03-31 14:59:40'),(7,3,'Section 80G(Donations towards social causes)','100%, 50% or 10% deductions based on organisation available on donations made for social causes. Submit all your donation receipts.','2015-03-31 14:59:40','2015-03-31 14:59:40'),(8,4,'Deductions under section 80C, 80CCC and 80CCD','The total limit for this section is INR 150000. Thus, you can still save tax on INR52109. You can invest in any of these : PPF, VPF, LIC, Pension schemes, Mutual Funds, ULIPs, etc.','2015-03-31 17:49:29','2015-03-31 17:49:29'),(9,4,'Deductions under section 80CCG (Rajiv Gandhi Equity Saving Scheme)','Upon fulfillment of conditions laid down in the section, the deduction is lower of - 50% of amount invested in equity shares or Rs 25,000. ','2015-03-31 17:49:29','2015-03-31 17:49:29'),(10,4,'Section 10(13A) of the Income Tax Act and Rule 2A (House Rent Allowance)','In case you stay in an rented house, submit lease agreement copy, rent receipts and pancard of the owner (in case total rent per year > 100000)','2015-03-31 17:49:29','2015-03-31 17:49:29'),(11,4,'Section 80E(Education loan interest)','Tax saving is available for interest paid for education loans taken for higher studies.','2015-03-31 17:49:29','2015-03-31 17:49:29'),(12,4,'Section 80EE(First time Housing loan)','The deduction under this section is available only to Individuals for first house purchased where the value of the house is Rs 40lakhs or less and loan taken for the house is Rs 25lakhs or less. The total deduction allowed under this section is Rs 1,00,000. ','2015-03-31 17:49:29','2015-03-31 17:49:29'),(13,4,'Section 80D(Medical Insurance)','Tax saving on premiums paid towards medical insurance and health checkup upto 15000 for self, spouse & children and 15000 for parents.','2015-03-31 17:49:29','2015-03-31 17:49:29'),(14,4,'Section 80DD, 80DDB and 80U (Medical Expenditure for disability)','In case any expenses are incurred towards treatment of disabled or disabilities for self or dependent, please submit proofs.','2015-03-31 17:49:29','2015-03-31 17:49:29'),(15,4,'Section 80G(Donations towards social causes)','100%, 50% or 10% deductions based on organisation available on donations made for social causes. Submit all your donation receipts.','2015-03-31 17:49:29','2015-03-31 17:49:29'),(16,4,'Section 80TTA(Income from savings account)','If your income from other sources includes interest on savings account, submit appropriate proofs to avail a rebate on upto Rs.10000.','2015-03-31 17:49:29','2015-03-31 17:49:29'),(17,5,'Deductions under section 80CCG (Rajiv Gandhi Equity Saving Scheme)','Upon fulfillment of conditions laid down in the section, the deduction is lower of - 50% of amount invested in equity shares or Rs 25,000. ','2015-03-31 20:21:06','2015-03-31 20:21:06'),(18,5,'Section 10(13A) of the Income Tax Act and Rule 2A (House Rent Allowance)','In case you stay in an rented house, submit lease agreement copy, rent receipts and pancard of the owner (in case total rent per year > 100000)','2015-03-31 20:21:06','2015-03-31 20:21:06'),(19,5,'Section 80E(Education loan interest)','Tax saving is available for interest paid for education loans taken for higher studies.','2015-03-31 20:21:06','2015-03-31 20:21:06'),(20,5,'Section 80EE(First time Housing loan)','The deduction under this section is available only to Individuals for first house purchased where the value of the house is Rs 40lakhs or less and loan taken for the house is Rs 25lakhs or less. The total deduction allowed under this section is Rs 1,00,000. ','2015-03-31 20:21:06','2015-03-31 20:21:06'),(21,5,'Section 80D(Medical Insurance)','Tax saving on premiums paid towards medical insurance and health checkup upto 15000 for self, spouse & children and 15000 for parents.','2015-03-31 20:21:06','2015-03-31 20:21:06'),(22,5,'Section 80DD, 80DDB and 80U (Medical Expenditure for disability)','In case any expenses are incurred towards treatment of disabled or disabilities for self or dependent, please submit proofs.','2015-03-31 20:21:06','2015-03-31 20:21:06'),(23,5,'Section 80G(Donations towards social causes)','100%, 50% or 10% deductions based on organisation available on donations made for social causes. Submit all your donation receipts.','2015-03-31 20:21:06','2015-03-31 20:21:06'),(24,5,'Section 80TTA(Income from savings account)','If your income from other sources includes interest on savings account, submit appropriate proofs to avail a rebate on upto Rs.10000.','2015-03-31 20:21:06','2015-03-31 20:21:06');
+INSERT INTO `save_taxes` VALUES (1,1,'2','','2015-04-01 06:08:11','2015-04-01 06:08:11'),(2,1,'4','','2015-04-01 06:08:11','2015-04-01 06:08:11'),(3,1,'5','','2015-04-01 06:08:12','2015-04-01 06:08:12'),(4,1,'6',' ','2015-04-01 06:08:12','2015-04-01 06:08:12'),(5,1,'7','','2015-04-01 06:08:12','2015-04-01 06:08:12'),(6,1,'8','','2015-04-01 06:08:12','2015-04-01 06:08:12'),(7,1,'9','','2015-04-01 06:08:12','2015-04-01 06:08:12'),(8,1,'10','','2015-04-01 06:08:12','2015-04-01 06:08:12'),(9,3,'1','58000','2015-04-01 06:18:32','2015-04-01 06:18:32'),(10,3,'2','','2015-04-01 06:18:33','2015-04-01 06:18:33'),(11,3,'5','','2015-04-01 06:18:33','2015-04-01 06:18:33'),(12,3,'6',' ','2015-04-01 06:18:33','2015-04-01 06:18:33'),(13,3,'7','','2015-04-01 06:18:33','2015-04-01 06:18:33'),(14,3,'8','','2015-04-01 06:18:33','2015-04-01 06:18:33'),(15,3,'9','','2015-04-01 06:18:33','2015-04-01 06:18:33'),(16,3,'10','','2015-04-01 06:18:33','2015-04-01 06:18:33');
 /*!40000 ALTER TABLE `save_taxes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -284,4 +284,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-04-01 10:24:46
+-- Dump completed on 2015-04-01 11:57:48
