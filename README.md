@@ -31,4 +31,4 @@ You can see all employees
 
 Currently, we have a scheduler which will send emails to all employees (savetax, payslip and taxslip)
 
-In case you wish to receive mail immediately, hit localhost:4000/mail/save_tax , localhost:4000/mail/payslip and localhost:4000/mail/taxslip respectively.
+In case you wish to receive mail immediately, hit localhost:4000/mail/save_tax , localhost:4000/mail/payslip and localhost:4000/mail/taxslip respectively. The mail can be viewed in your inbox(so give your email address while adding new employee). You can also go to gmail and open the account : thunderingherdhacksmb@gmail.com , password: gogreen@123 , check the sent mail folder.
