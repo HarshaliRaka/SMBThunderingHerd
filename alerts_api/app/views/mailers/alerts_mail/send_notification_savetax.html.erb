@@ -31,6 +31,7 @@
       </div>
     </div>
 
+
     <div id="content">
 
         <div id="content_0" style="margin-top: -20px;">
@@ -40,10 +41,47 @@
               <th style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;">DESCRIPTION</th>
             </tr>
             <% obj['savetax'].each do |tx| %>
-              <%= p tx %>
+
+              <% if tx['table']['act_name'] =="1" %>
+                <% act_name = "Deductions under section 80C, 80CCC and 80CCD" %>
+                <% des = "The total limit for this section is INR 150000. You can save more INR" + tx['table']['description'] + ". You can invest in any of these : PPF, VPF, LIC, Pension schemes, Mutual Funds, ULIPs, etc." %>
+
+              <% elsif tx['table']['act_name'] =="2" %>
+                <% act_name = "Deductions under section 80CCG (Rajiv Gandhi Equity Saving Scheme)" %>
+                <% des = "Upon fulfillment of conditions laid down in the section, the deduction is lower of - 50% of amount invested in equity shares or Rs 25,000." %>
+              <% elsif tx['table']['act_name'] =="3" %>
+                <% act_name = "Deductions under section 80GG (House Rent)" %>
+                <% des = "Deduction available is the least of :a) Rent paid minus 10% of total income b) Rs. 2000/- per month c) 25% of total income" %>
+              <% elsif tx['table']['act_name'] =="4" %>
+                <% act_name = "Section 10(13A) of the Income Tax Act and Rule 2A (House Rent Allowance)" %>
+                <% des = "In case you stay in an rented house, submit lease agreement copy, rent receipts and pancard of the owner (in case total rent per year > 100000)" %>
+              <% elsif tx['table']['act_name'] =="5" %>
+                <% act_name = "Section 80E(Education loan interest)" %>
+                <% des = "Tax saving is available for interest paid for education loans taken for higher studies." %>
+              <% elsif tx['table']['act_name'] =="6" %>
+                <% act_name = "Section 80EE(First time Housing loan)" %>
+                <% des = "The deduction under this section is available only to Individuals for first house purchased where the value of the house is Rs 40lakhs or less and loan taken for the house is Rs 25lakhs or less. The total deduction allowed under this section is Rs 1,00,000." %>
+              <% elsif tx['table']['act_name'] =="7" %>
+                <% act_name = "Section 80D(Medical Insurance)" %>
+                <% des = "Tax saving on premiums paid towards medical insurance and health checkup upto 15000 for self, spouse & children and 15000 for parents." %>
+
+              <% elsif tx['table']['act_name'] =="8" %>
+                <% act_name = "Section 80DD, 80DDB and 80U (Medical Expenditure for disability)" %>
+                <% des = "In case any expenses are incurred towards treatment of disabled or disabilities for self or dependent, please submit proofs." %>
+
+              <% elsif tx['table']['act_name'] =="9" %>
+                <% act_name = "Section 80G(Donations towards social causes)" %>
+                <% des = "100%, 50% or 10% deductions based on organisation available on donations made for social causes. Submit all your donation receipts." %>
+              <% elsif tx['table']['act_name'] =="10" %>
+                <% act_name = "Section 80TTA(Income from savings account)" %>
+                <% des = "If your income from other sources includes interest on savings account, submit appropriate proofs to avail a rebate on upto Rs.10000." %>
+              <% end %>
+
+
+
             <tr>
-              <tr style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= tx['table']['act_name'] %></tr>
-              <tr style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= tx['table']['description'] %></tr>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= act_name %></td>
+              <td style="background: #ffffff;border: 1.5px solid #999;padding: 10px;width: 200px;"><%= des %></td>
             </tr>
           <%end %>
          </table>
